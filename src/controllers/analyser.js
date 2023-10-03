@@ -22,7 +22,7 @@ export const analyser = async (req, res) => {
 
         return responseHandler(res, 200, true, "DTI successfully analyzed.", analysis );
 } catch (error) {
-    await errorHanlder(error);
+    await errorHandler(error);
     return responseHandler(res, 500, false, "Something went wrong, try again later");
 }
 }
